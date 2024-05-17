@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  background: url("./assests/bg.jpg");
+  min-height: 100vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile {
+  height: 400px;
+  width: 210px;
+  background: url("./assests/bg-2.jpg");
+
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.empty {
+  height: 15px;
+}
+.row2 {
+  display: none;
+}
+input {
+  bottom: 80px;
+
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  border-radius: 40px;
+
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+
+  transition: opacity 1s;
+  padding: 5px 0 5px 0;
+}
+.label {
+  bottom: 85px;
+
+  pointer-events: none;
+  font-weight: 500;
+  animation: move 5s linear infinite;
+  opacity: 0.6;
+  transition: color 3s;
+}
+input::-webkit-slider-thumb {
+  appearance: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(rgba(6, 69, 240, 0.486), rgb(29, 1, 25));
+  border-radius: 50%;
+}
+@keyframes move {
+  0%,
+  100% {
+    color: gray;
+  }
+  50%,
+  80% {
+    color: rgb(60, 6, 6);
+    opacity: 1;
+  }
+}
+/* input::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  opacity: 1;
+} */
+.bi-person-rolodex {
+  font-size: 50px;
+}
+.bi-person-rolodex:hover {
+  color: brown;
+  cursor: pointer;
+}
+.row1 {
+  display: none;
+}
