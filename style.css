@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+span {
+  margin-left: 5px;
+}
 .wrapper {
   background: url("./assests/bg.jpg");
   min-height: 100vh;
@@ -11,7 +18,7 @@
 
 .mobile {
   height: 400px;
-  width: 210px;
+  width: 240px;
   background: url("./assests/bg-2.jpg");
 
   object-fit: cover;
@@ -24,7 +31,7 @@
 .row2 {
   display: none;
 }
-input {
+.row > input {
   bottom: 80px;
 
   -webkit-appearance: none; /* Override default CSS styles */
@@ -45,7 +52,7 @@ input {
   opacity: 0.6;
   transition: color 3s;
 }
-input::-webkit-slider-thumb {
+.row2 > input::-webkit-slider-thumb {
   appearance: none;
   cursor: pointer;
   width: 25px;
@@ -77,4 +84,19 @@ input::-webkit-slider-thumb {
 }
 .row1 {
   display: none;
+}
+.search {
+  right: 10px;
+  bottom: 5px;
+  cursor: pointer;
+}
+.accordion {
+  --bs-accordion-btn-padding-x: 0.25rem;
+  -bs-accordion-body-padding-x: 0.25rem;
+}
+.accordion-button {
+  padding: 0.25rem;
+}
+.accordion-body {
+  padding: 0.25rem;
 }

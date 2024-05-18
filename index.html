@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper d-flex justify-content-center align-items-center">
+    <div class="wrapper d-flex    justify-content-center align-items-center">
       <div
-        class="mobile shadow border overflow-hidden border-3 border-dark rounded rounded-4 px-3"
+        class="mobile shadow border  overflow-y-scroll border-3 border-dark rounded rounded-4 px-1"
       >
         <div
           class="row text-white d-flex align-items-center justify-content-center mt-2"
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <main class="row h-100 position-relative row1">
+        <main class="row1 h-100 position-relative row1">
           <input
             type="range"
             class="position-absolute bg-white"
@@ -47,8 +47,55 @@
             >Slide to unlock</small
           >
         </main>
-       <main class="row2 d-flex justify-content-center h-100 align-items-center">
+       <main class="row2  justify-content-center h-100   align-items-center" style="display: none;">
         <div class="col-4 text-white"><i class="bi bi-person-rolodex "></i></div>
+       </main>
+       <main class="according-screen mt-1 row row3">
+        <div class="title fw-bold text-white">CONTACT</div>
+        <div class="search-container position-relative rounded">
+
+          <input type="text" class="rounded rounded-4 " name="" id="">
+          <div class="search position-absolute"><i class="bi bi-search"></i></div>
+        </div>
+
+        <!-- spinner -->
+        <div class="spinner" >
+          <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          </div>
+       
+
+
+        <!-- contact list container -->
+        <div class="listcontainer" >
+          <div class="contact_count text-white">contact 10</div>
+          
+          <div class="accordion contact_list " id="accordionPanelsStayOpenExample"></div>
+
+           
+           
+          
+
+        
+        
+        
+        
+        
+        </div>
+        
        </main>
     </div>
 
