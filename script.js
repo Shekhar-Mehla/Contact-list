@@ -57,7 +57,7 @@ const show_list = () => {
       width="50px">
       <div>
         <div class="fw-bolder">${item.name.first} ${item.name.last}</div>
-        <small>1 baileyt </small>
+        <small> ${item.location.city} ${item.location.country} </small>
       </div>
     </button>
   </h2>
