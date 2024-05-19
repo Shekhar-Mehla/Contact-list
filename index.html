@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper d-flex    justify-content-center align-items-center">
+    <div class="wrapper d-flex justify-content-center align-items-center">
       <div
-        class="mobile shadow border  overflow-y-scroll border-3 border-dark rounded rounded-4 px-1"
+        class="mobile shadow border overflow-hidden overflow-y-scroll    border-3 border-dark rounded rounded-4 px-1"
       >
         <div
-          class="row text-white d-flex align-items-center justify-content-center mt-2"
+          class="row mobile_top text-white d-flex align-items-center justify-content-center position-sticky mt-2"
         >
           <div class="col-4">12:50</div>
           <div
@@ -36,25 +36,27 @@
           </div>
         </div>
 
-        <main class="row1 h-100 position-relative row1">
+        <main class="row1 h-100 position-relative  row1" style='display: block;'>
           <input
             type="range"
-            class="position-absolute bg-white"
+            class="position-absolute w-100 bg-white"
             name=""
             id=""
+            value="10"
           />
           <small class="position-absolute w-100 label p-1 text-center"
             >Slide to unlock</small
           >
         </main>
        <main class="row2  justify-content-center h-100   align-items-center" style="display: none;">
-        <div class="col-4 text-white"><i class="bi bi-person-rolodex "></i></div>
+        <div class="col-4 text-white text-center"><i class="bi bi-person-rolodex "></i>
+        <div>Contacts</div></div>
        </main>
-       <main class="according-screen mt-1 row row3">
+       <main class="according-screen mt-1 row row3" style="display: none;">
         <div class="title fw-bold text-white">CONTACT</div>
         <div class="search-container position-relative rounded">
 
-          <input type="text" class="rounded rounded-4 " name="" id="">
+          <input type="text" class="rounded px-3 rounded-4 " name="" id="">
           <div class="search position-absolute"><i class="bi bi-search"></i></div>
         </div>
 
@@ -81,9 +83,9 @@
 
         <!-- contact list container -->
         <div class="listcontainer" >
-          <div class="contact_count text-white">contact 10</div>
+          <div class="contact_count text-white bg-dark" style="display: none;">contact <span></span></div>
           
-          <div class="accordion contact_list " id="accordionPanelsStayOpenExample"></div>
+          <div class="accordion contact_list   " id="accordionPanelsStayOpenExample"></div>
 
            
            

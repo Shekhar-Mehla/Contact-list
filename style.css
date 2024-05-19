@@ -18,12 +18,14 @@ span {
 
 .mobile {
   height: 400px;
-  width: 240px;
+  width: 250px;
   background: url("./assests/bg-2.jpg");
 
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-wrap: unset;
+  position: relative;
 }
 .empty {
   height: 15px;
@@ -31,7 +33,7 @@ span {
 .row2 {
   display: none;
 }
-.row > input {
+.row1 > input {
   bottom: 80px;
 
   -webkit-appearance: none; /* Override default CSS styles */
@@ -41,7 +43,7 @@ span {
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
 
   transition: opacity 1s;
-  padding: 5px 0 5px 0;
+  padding: 8px 0 8px 0;
 }
 .label {
   bottom: 85px;
@@ -52,13 +54,14 @@ span {
   opacity: 0.6;
   transition: color 3s;
 }
-.row2 > input::-webkit-slider-thumb {
+.row1 > input::-webkit-slider-thumb {
   appearance: none;
   cursor: pointer;
   width: 25px;
   height: 25px;
   background: radial-gradient(rgba(6, 69, 240, 0.486), rgb(29, 1, 25));
   border-radius: 50%;
+  
 }
 @keyframes move {
   0%,
@@ -86,7 +89,7 @@ span {
   display: none;
 }
 .search {
-  right: 10px;
+  right: 45px;
   bottom: 5px;
   cursor: pointer;
 }
@@ -99,4 +102,14 @@ span {
 }
 .accordion-body {
   padding: 0.25rem;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  visibility: hidden;
+}
+.mobile_top {
+  position: fixed;
+  top: 0vh;
+  background-color: inherit;
+  z-index: 2;
 }
