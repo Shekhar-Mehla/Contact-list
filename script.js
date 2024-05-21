@@ -22,7 +22,7 @@ const url = "https://randomuser.me/api?results=10";
 const fetCH_api = async (url) => {
   const response = await fetch(url);
   data = await response.json();
-  userList.push(...data.results);
+  userList = data.results;
   // calculate total contact in the list
   document.querySelector(".contact_count span").innerText =
     total_contact(userList);
@@ -30,19 +30,18 @@ const fetCH_api = async (url) => {
 
 const display_userlist = () => {
   fetCH_api(url);
+  const spinner = document.querySelector(".spinner");
   setTimeout(() => {
-    const spinner = document.querySelector(".spinner");
     const contact_count = document.querySelector(".contact_count");
     const list = document.querySelector(".listcontainer");
     spinner.style.display = "none";
     contact_count.style.display = "block";
     list.style.display = "block";
-
-    show_list();
-  }, 2000);
+    show_list(userList);
+  }, 1000);
 };
 
-const show_list = () => {
+const show_list = (userList) => {
   let str = "";
   userList.map((item, i) => {
     str += `
@@ -72,13 +71,13 @@ const show_list = () => {
       <div class="name">
         <i class="bi bi-person-circle"></i><span class="fw-bolder">${item.name.first} ${item.name.last}</span>
       </div>
-      <div class="phone">
+      <div class="phone d-flex justify-content-center ">
 <a href="tel:${item.phone}">
 <i class="bi bi-phone"></i><span>${item.phone}</span>
 </a>
 
       </div>
-      <div class="email">
+      <div class="email   d-flex justify-content-center">
 
       <a href="mailto:${item.email}">
         <i class="bi bi-envelope"></i><span>${item.email}</span>
@@ -101,13 +100,25 @@ const show_list = () => {
 
 
 </div>`;
-
-    document.querySelector(".contact_list").innerHTML = str;
   });
+  document.querySelector(".contact_list").innerHTML = str;
 };
-show_list();
+
 const total_contact = (userList) => {
   total = userList.length;
   return total;
 };
+
 // filter the list using search function
+document.querySelector(".searchInput").addEventListener("keyup", (e) => {
+  const { value } = e.target;
+  let newList = userList.filter((item) => {
+    const name = (item.name.first + " " + item.name.last).toLowerCase();
+    return name.includes(value.toLowerCase());
+  });
+
+  show_list(newList);
+  console.log(newList);
+  document.querySelector(".contact_count span").innerText =
+    total_contact(userList);
+});

@@ -15,7 +15,7 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* mobile main sreen */
 .mobile {
   height: 400px;
   width: 250px;
@@ -27,12 +27,21 @@ span {
   overflow-wrap: unset;
   position: relative;
 }
+/* mobile screen first row */
+.mobile_top {
+  position: relative;
+  top: 0%;
+  background-color: inherit;
+}
+
 .empty {
   height: 15px;
 }
-.row2 {
+/* mobile screen first second row which has slider in it. */
+.row1 {
   display: none;
 }
+
 .row1 > input {
   bottom: 80px;
 
@@ -45,6 +54,14 @@ span {
   transition: opacity 1s;
   padding: 8px 0 8px 0;
 }
+.row1 > input::-webkit-slider-thumb {
+  appearance: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(rgba(6, 69, 240, 0.486), rgb(29, 1, 25));
+  border-radius: 50%;
+}
 .label {
   bottom: 85px;
 
@@ -54,15 +71,11 @@ span {
   opacity: 0.6;
   transition: color 3s;
 }
-.row1 > input::-webkit-slider-thumb {
-  appearance: none;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  background: radial-gradient(rgba(6, 69, 240, 0.486), rgb(29, 1, 25));
-  border-radius: 50%;
-  
+/* second screen after sliding to unlock */
+.row2 {
+  display: none;
 }
+/* animation for first screen for the label */
 @keyframes move {
   0%,
   100% {
@@ -85,9 +98,6 @@ span {
   color: brown;
   cursor: pointer;
 }
-.row1 {
-  display: none;
-}
 .search {
   right: 45px;
   bottom: 5px;
@@ -106,10 +116,4 @@ span {
 ::-webkit-scrollbar {
   width: 0px;
   visibility: hidden;
-}
-.mobile_top {
-  position: fixed;
-  top: 0vh;
-  background-color: inherit;
-  z-index: 2;
 }
