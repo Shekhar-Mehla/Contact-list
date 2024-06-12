@@ -3,7 +3,7 @@ let userList = [];
 // open the next screen once input value is more than 70%
 const input = document.querySelector(".row1 input");
 input.addEventListener("change", () => {
-  if (input.value >= "60") {
+  if (input.value >= eval("60")) {
     document.querySelector(".row1").style.display = "none";
     document.querySelector(".row2").style.display = "flex";
   }
@@ -120,5 +120,5 @@ document.querySelector(".searchInput").addEventListener("keyup", (e) => {
   show_list(newList);
   console.log(newList);
   document.querySelector(".contact_count span").innerText =
-    total_contact(userList);
+    total_contact(newList);
 });
